@@ -13,3 +13,23 @@ html {
   background-size: center;
   background-color: black;
 }
+.main-bg {
+  background: url("../public/images/main-bg.jpg");
+  background-size: center;
+  background-color: black;
+}
+.home-round {
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+}
+.button{
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    @apply px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-semibold hover:from-yellow-600 hover:to-yellow-400 focus:outline-none ring-2 ring-yellow-500 ring-opacity-50
+}
+@media (max-width: 640px) {
+    .home-round {
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }

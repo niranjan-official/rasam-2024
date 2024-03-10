@@ -4,9 +4,9 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <div className="w-24 h-full fixed top-0 left-0 p-4 py-10 z-50">
+    <div className="w-24 h-full fixed top-0 left-0 p-4 py-10 z-50 hidden lg:block">
       <div className="w-full h-full flex flex-col items-center justify-evenly text-xs font-semibold bg-cyan-950 bg-opacity-40 text-slate-300 rounded-3xl">
-        <Link href="#home"  className="flex flex-col items-center ">
+        <Link href="#home"  className="flex flex-col items-center hover:text-white ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -21,7 +21,7 @@ const NavBar = () => {
           </svg>
           <span>Home</span>
         </Link>
-        <Link href="#about" className="flex flex-col items-center gap-1">
+        <Link href="#about" className="flex flex-col items-center gap-1 hover:text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-info-octagon-filled w-9 h-9"
@@ -41,7 +41,7 @@ const NavBar = () => {
           </svg>
           <span>About</span>
         </Link>
-        <Link href={'#events'} className="flex flex-col items-center">
+        <Link href={'#events'} className="flex flex-col items-center hover:text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ const NavBar = () => {
           </svg>
           <span>Events</span>
         </Link>
-        <Link href={'#gallery'} className="flex flex-col items-center">
+        <Link href={'#gallery'} className="flex flex-col items-center hover:text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
