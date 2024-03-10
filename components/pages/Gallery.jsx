@@ -1,17 +1,8 @@
 import React from "react";
 import Heading from "../Heading";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Card, CardContent } from "../ui/card";
-import Autoplay from "embla-carousel-autoplay"
 import CarouselBody from "../CarouselBody";
 
-const Gallery = () => {
+const Gallery = ({gallery}) => {
   return (
     <section
       id="gallery"
@@ -19,7 +10,7 @@ const Gallery = () => {
     >
       <Heading title={"Gallery"} />
       <div className="flex justify-center items-center py-8">
-      <CarouselBody/>
+      <CarouselBody images={gallery}/>
       </div>
     </section>
   );
