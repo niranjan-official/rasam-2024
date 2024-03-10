@@ -24,13 +24,13 @@ const CarouselBody = ({images}) => {
           delay: 4000,
         }),
       ]}>
-      <CarouselContent>
+      <CarouselContent  className="">
         {CarouselImages.map((obj, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={index} className=" md:basis-1/2">
             <div className="p-1">
               <Card className="border-none">
                 <CardContent className="flex aspect-square border-none items-center justify-center">
-                  <Image src={obj} width={400} height={400}/>
+                  <Image src={obj} width={400} height={400} className="rounded-tl-3xl rounded-br-3xl md:h-72 "/>
                 </CardContent>
               </Card>
             </div>

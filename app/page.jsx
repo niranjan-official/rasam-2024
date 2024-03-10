@@ -11,7 +11,7 @@ const fetchData = async () => {
   let data = [];
   const querySnapshot = await getDocs(collection(db, "images"));
   querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
+    //console.log(doc.id, " => ", doc.data());
     data.push({category: doc.id, images: doc.data()})
   });
   return data;
@@ -20,7 +20,7 @@ const fetchData = async () => {
 export default async function Main() {
 
   const data = await fetchData();
-  console.log("Events: "+data[0]);
+  //console.log("Events: "+data[0]);
 
   return (
     <main className="flex h-screen flex-col home-bg overflow-y-scroll">
