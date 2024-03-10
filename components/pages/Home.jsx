@@ -30,7 +30,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full h-full flex flex-col items-center justify-center drop-shadow-md shadow-black md:hidden">
+      <div className="w-full h-full flex flex-col items-center justify-center drop-shadow-md shadow-black md:hidden mobile-bg">
         <div className="w-full h-auto md:px-56">
           <Image
             className="opacity-45"

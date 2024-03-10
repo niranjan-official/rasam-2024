@@ -19,6 +19,12 @@ html {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.mobile-bg {
+    background: url("../public/images/mobile-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 .home-round {
   border-top-left-radius: 25%;
   border-bottom-right-radius: 25%;
@@ -39,7 +45,7 @@ html {
     src: url('../components/fonts/ananda-neptouch.ttf') format('truetype');
     /* Additional font properties can be specified here */
   }
-.footer-regular {
+.rasam-font {
     font-family: "custom1",sans-serif;
     font-weight: 400;
     font-style: normal;

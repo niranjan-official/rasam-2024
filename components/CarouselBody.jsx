@@ -15,7 +15,7 @@ const CarouselBody = ({images}) => {
     const CarouselImages = images.images.image;
     console.log(CarouselImages[1]);
   return (
-    <Carousel className="w-full md:max-w-lg" opts={{
+    <Carousel className="w-full md:max-w-4xl text-white" opts={{
         align: "start",
         loop: true,
       }}
@@ -24,7 +24,7 @@ const CarouselBody = ({images}) => {
           delay: 4000,
         }),
       ]}>
-      <CarouselContent  className="">
+      <CarouselContent>
         {CarouselImages.map((obj, index) => (
           <CarouselItem key={index} className=" md:basis-1/2">
             <div className="p-1">
@@ -37,8 +37,8 @@ const CarouselBody = ({images}) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hidden md:block"/>
+      <CarouselNext className="hidden md:block"/>
     </Carousel>
   )
 }
