@@ -12,9 +12,10 @@ import { Card, CardContent } from './ui/card';
 import Image from 'next/image';
 
 const CarouselBody = ({images}) => {
-    console.log(images);
+    const CarouselImages = images.images.image;
+    console.log(CarouselImages[1]);
   return (
-    <Carousel className="w-full md:max-w-2xl" opts={{
+    <Carousel className="w-full md:max-w-lg" opts={{
         align: "start",
         loop: true,
       }}
@@ -24,12 +25,12 @@ const CarouselBody = ({images}) => {
         }),
       ]}>
       <CarouselContent>
-        {images.images.image.map((obj, index) => (
+        {CarouselImages.map((obj, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <Card className={"bg-slate-300"}>
-                <CardContent className="flex h-96 bg-slate-300 items-center justify-center p-6">
-                  <Image src={obj} width={0} height={0} style={{height:'100%',width:'auto'}}/>
+              <Card className="border-none">
+                <CardContent className="flex aspect-square border-none items-center justify-center">
+                  <Image src={obj} width={400} height={400}/>
                 </CardContent>
               </Card>
             </div>
