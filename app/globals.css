@@ -1,11 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
-.home-bg{
-    background: url('../public/images/home-bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+.home-bg {
+  background: url("../public/images/home-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+  background-color: black;
 }

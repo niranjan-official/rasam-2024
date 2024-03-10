@@ -7,7 +7,7 @@ import Footer from "@/components/pages/Footer";
 
 export default function Main() {
   return (
-    <main className="flex min-h-screen flex-col bg-black">
+    <main className="flex h-screen flex-col home-bg overflow-y-scroll">
      <NavBar/>
      <Home/>
      <About/>
