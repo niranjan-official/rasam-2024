@@ -7,16 +7,17 @@ html {
   scroll-behavior: smooth !important;
 }
 .home-bg {
-  background: url("../public/images/home-bg.jpg");
+  background: url("../public/images/home-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: center;
+  background-size: cover;
   background-color: black;
 }
 .main-bg {
-  background: url("../public/images/main-bg.jpg");
-  background-size: center;
-  background-color: black;
+  background: url("../public/images/vector-8.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .home-round {
   border-top-left-radius: 25%;

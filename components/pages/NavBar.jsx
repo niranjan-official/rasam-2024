@@ -4,7 +4,7 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <div className="w-24 h-full fixed top-0 left-0 p-4 py-10 z-50 hidden lg:block">
+    <div className="w-24 h-full fixed top-0 left-0 p-4 py-20 z-50 hidden lg:block">
       <div className="w-full h-full flex flex-col items-center justify-evenly text-xs font-semibold bg-cyan-950 bg-opacity-40 text-slate-300 rounded-3xl">
         <Link href="#home"  className="flex flex-col items-center hover:text-white ">
           <svg
@@ -19,7 +19,6 @@ const NavBar = () => {
               clipRule="evenodd"
             />
           </svg>
-          <span>Home</span>
         </Link>
         <Link href="#about" className="flex flex-col items-center gap-1 hover:text-white">
           <svg
@@ -39,7 +38,6 @@ const NavBar = () => {
               fill="currentColor"
             />
           </svg>
-          <span>About</span>
         </Link>
         <Link href={'#events'} className="flex flex-col items-center hover:text-white">
           <svg
@@ -54,7 +52,6 @@ const NavBar = () => {
               clipRule="evenodd"
             />
           </svg>
-          <span>Events</span>
         </Link>
         <Link href={'#gallery'} className="flex flex-col items-center hover:text-white">
           <svg
@@ -69,7 +66,6 @@ const NavBar = () => {
               clipRule="evenodd"
             />
           </svg>
-          <span>Gallery</span>
         </Link>
       </div>
     </div>
