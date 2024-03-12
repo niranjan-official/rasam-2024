@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../Heading";
-import CarouselBody from "../CarouselBody";
+import ReactCarousel from "../ReactCarousel";
 
 const Gallery = ({gallery}) => {
   return (
@@ -10,7 +10,7 @@ const Gallery = ({gallery}) => {
     >
       <Heading title={"Gallery"} />
       <div className="flex justify-center items-center py-8">
-      <CarouselBody images={gallery}/>
+      <ReactCarousel images={gallery}/>
       </div>
     </section>
   );
