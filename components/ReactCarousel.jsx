@@ -13,7 +13,8 @@ const ReactCarousel = ({ images }) => {
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3
+            items: 3,
+            partialVisibilityGutter: 25
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -21,15 +22,18 @@ const ReactCarousel = ({ images }) => {
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 1
+            items: 1,
+            partialVisibilityGutter: 25
         }
     };
     const CarouselImages = images.images.image;
     console.log(CarouselImages, "here");
     return (
-        <Carousel responsive={responsive} className='w-full flex  h-full' showDots={true} infinite={true} autoPlay={true} autoPlaySpeed={3000} removeArrowOnDeviceType={['mobile','tablet']}>
+        <Carousel responsive={responsive} className='w-full flex h-full' partialVisible={true} showDots={true} infinite={true} autoPlay={true} autoPlaySpeed={3000} removeArrowOnDeviceType={['mobile','tablet']}>
             {CarouselImages.map((obj, index) => (
-                <Image width={300} height={300} src={obj} key={index} alt="..." className='hover:scale-110 transition duration-200 cursor-pointer'/>
+                <div className='p-3 sm:px-5'>
+                    <Image width={300} height={300} src={obj} key={index} alt="..." className='hover:scale-110 transition duration-200 cursor-pointer'/>
+                </div>
             ))}
         </Carousel>
     )
