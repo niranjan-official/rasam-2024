@@ -12,7 +12,7 @@ import { Card, CardContent } from './ui/card';
 import Image from 'next/image';
 
 const CarouselBody = ({images}) => {
-    const CarouselImages = images.images.image;
+    const CarouselImages = images?.images?.image;
     console.log(CarouselImages[1]);
   return (
     <Carousel className="w-full md:max-w-4xl text-white" opts={{

@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/sheet";
 
 const NavBar = () => {
+
   return (
     <>
       <div className="w-24 h-full fixed top-0 left-0 p-4 py-20 z-50 hidden lg:block">
@@ -106,8 +107,18 @@ const NavBar = () => {
               />
             </svg>
           </SheetTrigger>
-          <SheetContent className="border-none shadow-lg shadow-white bg-white">
-           
+          <SheetContent className="border-none shadow-sm backdrop-filter backdrop-blur-md ">
+           <div className="w-full flex flex-col p-4 pl-2">
+            <h1 className="rasam-font text-white text-5xl text-opacity-60 ">Rasam</h1>
+            <hr className="b-2 border-gray-400 my-4"/>
+            <div className="flex flex-col text-white font-semibold gap-4 text-2xl pl-2">
+              <h2 className="p-2 bg-slate-300 bg-opacity-20 rounded-md">Home</h2>
+              <h2 className="p-2 rounded-md">About</h2>
+              <h2 className="p-2 rounded-md">Events</h2>
+              <h2 className="p-2 rounded-md">Pro-Show</h2>
+              <h2 className="p-2 rounded-md">Gallery</h2>
+            </div>
+           </div>
           </SheetContent>
         </Sheet>
       </div>

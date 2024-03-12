@@ -23,7 +23,7 @@ export default async function Main() {
   //console.log("Events: "+data[0]);
 
   return (
-    <main className="flex h-screen flex-col home-bg overflow-y-scroll">
+    <main className="flex h-screen flex-col bg-black overflow-y-scroll">
       <NavBar />
       <Home />
       <About />
