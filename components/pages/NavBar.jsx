@@ -14,8 +14,8 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="w-24 h-full fixed top-0 left-0 p-4 py-20 z-50 hidden lg:block">
-        <div className="w-full h-full flex flex-col items-center justify-evenly text-xs font-semibold bg-cyan-950 bg-opacity-40 text-slate-300 rounded-3xl">
+      <div className="w-24 h-full fixed top-0 left-0 p-4 backdrop-filter backdrop-blur-xl z-50 hidden lg:block">
+        <div className="w-full h-full flex flex-col items-center justify-evenly text-xs font-semibold text-slate-300 rounded-3xl">
           <Link
             href="#home"
             className="flex flex-col items-center hover:text-white "
