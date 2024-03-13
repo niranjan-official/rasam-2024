@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../Heading";
-import ReactCarouselGal from "../ReactCarouselgal";
+import ReactCarouselGal from "../ReactCarouselGal";
 
 const Gallery = ({gallery}) => {
   return (
