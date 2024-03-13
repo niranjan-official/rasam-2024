@@ -9,11 +9,11 @@ const ReactCarouselGal = ({ images }) => {
         superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
-            items: 1
+            items: 3
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 1,
+            items: 2,
             partialVisibilityGutter: 25
         },
         tablet: {
@@ -29,7 +29,7 @@ const ReactCarouselGal = ({ images }) => {
     const CarouselImages = images.images.image;
     //console.log(CarouselImages, "here");
     return (
-        <Carousel responsive={responsive} className='w-full flex h-full' partialVisible={true} customButtonGroup={false} infinite={true} autoPlay={true} autoPlaySpeed={3000} removeArrowOnDeviceType={['mobile','tablet']}>
+        <Carousel responsive={responsive} className='w-full flex justify-center items-center h-full' partialVisible={true} customButtonGroup={false} infinite={true} autoPlay={true} autoPlaySpeed={2000} removeArrowOnDeviceType={['mobile','tablet']}>
             {CarouselImages.map((obj, index) => (
                 <div className=''>
                     <Image width={500} height={500} src={obj} key={index} alt="..." className=' hover:scale-110 transition duration-200 cursor-pointer'/>

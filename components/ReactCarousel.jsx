@@ -29,7 +29,7 @@ const ReactCarousel = ({ images }) => {
     const CarouselImages = images.images.image;
     //console.log(CarouselImages, "here");
     return (
-        <Carousel responsive={responsive} className='w-full flex h-full' partialVisible={true} showDots={true} infinite={true} autoPlay={true} autoPlaySpeed={2000} removeArrowOnDeviceType={['mobile','tablet']}>
+        <Carousel responsive={responsive} className='w-full flex h-full' partialVisible={true} showDots={true} infinite={true} autoPlay={true} autoPlaySpeed={3000} removeArrowOnDeviceType={['mobile','tablet']}>
             {CarouselImages.map((obj, index) => (
                 <div className='p-3 sm:px-5'>
                     <Image width={300} height={300} src={obj} key={index} alt="..." className=' hover:scale-110 transition duration-200 cursor-pointer'/>
