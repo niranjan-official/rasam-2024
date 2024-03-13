@@ -25,8 +25,8 @@ const page = async ({ params }) => {
     <div className="w-full flex flex-col sm:flex-row min-h-screen md:h-screen gap-4 p-4 pt-16 lg:px-28 bg-black text-white pb-6 ">
       <div className="flex w-full h-auto sm:w-1/2 md:px-16">
         <Image
-          height={100}
-          width={100}
+          height={500}
+          width={500}
           style={{ width: "100%", height: "auto" }}
           alt={"..."}
           src={data.image}
