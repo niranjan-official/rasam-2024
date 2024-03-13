@@ -28,7 +28,7 @@ export default async function Main() {
       <Home />
       <About />
       <Events images={data[0]}/>
-      <Gallery gallery={data[0]}/>
+      <Gallery gallery={data[1]}/>
       <Footer />
     </main>
   );
