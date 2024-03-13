@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 
 const ReactResCarousel = ({ images }) => {
-  const CarouselImages = images.images.image;
+  const CarouselImages = images?.images?.image;
   console.log(CarouselImages, "here");
   return (
     <div className="h-full w-full ">
