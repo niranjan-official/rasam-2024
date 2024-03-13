@@ -9,6 +9,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Image from "next/image";
 
 const NavBar = () => {
 
@@ -107,11 +108,11 @@ const NavBar = () => {
               />
             </svg>
           </SheetTrigger>
-          <SheetContent className="border-none shadow-sm backdrop-filter backdrop-blur-md ">
-           <div className="w-full flex flex-col p-4 pl-2">
-            <h1 className="rasam-font text-white text-5xl text-opacity-60 ">Rasam</h1>
+          <SheetContent side={"left"} className="border-none shadow-sm backdrop-filter backdrop-blur-md ">
+           <div className="w-full flex flex-col p-4">
+            <Image width={100} height={50} alt="..." src={"/images/rasam-font.svg"}/>
             <hr className="b-2 border-gray-400 my-4"/>
-            <div className="flex flex-col text-white font-semibold gap-4 text-2xl pl-2">
+            <div className="flex flex-col text-white gap-4 text-2xl">
               <h2 className="p-2 bg-slate-300 bg-opacity-20 rounded-md">Home</h2>
               <h2 className="p-2 rounded-md">About</h2>
               <h2 className="p-2 rounded-md">Events</h2>

@@ -3,6 +3,7 @@ import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ReactCarousel = ({ images }) => {
     const responsive = {
@@ -29,10 +30,12 @@ const ReactCarousel = ({ images }) => {
     const CarouselImages = images.images.image;
     //console.log(CarouselImages, "here");
     return (
-        <Carousel responsive={responsive} className='w-full flex h-full' partialVisible={true} showDots={true} infinite={true} autoPlay={true} autoPlaySpeed={3000} removeArrowOnDeviceType={['mobile','tablet']}>
+        <Carousel responsive={responsive} className='w-full flex h-full' partialVisible={true} infinite={true} autoPlay={true} autoPlaySpeed={3000} removeArrowOnDeviceType={['mobile','tablet']}>
             {CarouselImages.map((obj, index) => (
-                <div className='p-3 sm:px-5'>
-                    <Image width={300} height={300} src={obj.image} key={index} alt="..." className=' hover:scale-110 transition duration-200 cursor-pointer'/>
+                <div className='p-3 sm:px-5' key={index}>
+                    <Link href={`/events/${index}`}>
+                    <Image width={300} height={300} src={obj.image} alt="..." className=' hover:scale-110 transition duration-200 cursor-pointer'/>
+                    </Link>
                 </div>
             ))}
         </Carousel>

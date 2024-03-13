@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import rasamFont from "@/public/images/rasam-font.svg";
-import Counter from "../Counter";
+import rasamFont from "@/public/images/rasam-font.svg"; 
 import { MotionDiv, MotionH1, MotionSpan } from "../MotionComponent";
 
 const Home = () => {
@@ -46,8 +45,8 @@ const Home = () => {
               <MotionSpan
                 key={index}
                 initial={{ scale: 0 }}
-                animate={{ scale: [0, 1.2, 1] }}
-                transition={{ duration: 0.5, delay: index + 1 * 0.1 }}
+                animate={{ scale: [0, 2, 1] }}
+                transition={{ duration: 0.5, delay: index + 1 * 0.05 }}
                 style={{ display: "inline-block", marginRight: "0.5rem" }}
               >
                 {number}
@@ -59,7 +58,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: "easeInOut" , delay: 4}}
+            transition={{ duration: 1, ease: "easeInOut", delay: 4 }}
             className="text-2xl sm:text-4xl pl-4 font-bold"
             style={{ letterSpacing: "22px" }}
           >

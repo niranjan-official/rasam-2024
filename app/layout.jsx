@@ -2,6 +2,8 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import Loading from "./loading";
+import NavBar from "@/components/pages/NavBar";
+import Footer from "@/components/pages/Footer";
 
 const poppins = Poppins({
   weight: ['400', '700'],
@@ -19,7 +21,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         <Suspense fallback={<Loading/>}>
+          <NavBar/>
         {children}
+        <Footer/>
         </Suspense>
         </body>
     </html>

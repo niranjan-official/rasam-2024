@@ -31,8 +31,8 @@ const ReactCarouselGal = ({ images }) => {
     return (
         <Carousel responsive={responsive} className='w-full flex justify-center items-center h-full' partialVisible={true} customButtonGroup={false} infinite={true} autoPlay={true} autoPlaySpeed={2000} removeArrowOnDeviceType={['mobile','tablet']}>
             {CarouselImages.map((obj, index) => (
-                <div className=''>
-                    <Image width={500} height={500} src={obj} key={index} alt="..." className=' hover:scale-110 transition duration-200 cursor-pointer py-2 px-4'/>
+                <div className='' key={index}>
+                    <Image width={500} height={500} src={obj} alt="..." className=' hover:scale-110 transition duration-200 cursor-pointer py-2 px-4'/>
                 </div>
             ))}
         </Carousel>

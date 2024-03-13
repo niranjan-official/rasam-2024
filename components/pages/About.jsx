@@ -26,7 +26,7 @@ const About = () => {
             RASAM, an esteemed annual extravaganza, unites a tapestry of
             students, professionals, and enthusiasts across myriad domains,
             igniting the stage with their ingenuity, fueling innovation, and
-            reveling in the essence of creativity. In its fourth edition, RASAM
+            reveling in the essence of creativity. In its fifth edition, RASAM
             transcended boundaries, drawing participants from distant horizons.
             Entering its fifth spectacular season, RASAM stands as a beacon of
             creativity, uniting talents, professionals, and enthusiasts in a
