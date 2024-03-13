@@ -6,6 +6,7 @@ import Gallery from "@/components/pages/Gallery";
 import Footer from "@/components/pages/Footer";
 import { db } from "@/firebase/config";
 import { collection, getDocs } from "firebase/firestore";
+import RunningTheme from "@/components/RunningTheme";
 
 const fetchData = async () => {
   let data = [];
@@ -23,9 +24,10 @@ export default async function Main() {
   //console.log("Events: "+data[0]);
 
   return (
-    <main className="flex h-screen flex-col bg-black overflow-y-scroll">
+    <main className="flex h-max flex-col bg-black">
       <NavBar />
       <Home />
+      {/* <RunningTheme/> */}
       <About />
       <Events images={data[0]}/>
       <Gallery gallery={data[1]}/>

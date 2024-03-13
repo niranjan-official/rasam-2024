@@ -20,27 +20,33 @@ html {
   background-size: contain;
 }
 .mobile-bg {
-    background: url("../public/images/mobile-bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  background: url("../public/images/mobile-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .home-round {
   border-top-left-radius: 25%;
   border-bottom-right-radius: 25%;
 }
-.button{
-    border-top-left-radius: 30%;
-    border-bottom-right-radius: 30%;
-    @apply px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-semibold hover:from-yellow-600 hover:to-yellow-400 focus:outline-none ring-2 ring-yellow-500 ring-opacity-50
+.about-bg{
+  background: url("../public/images/college.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.button {
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  @apply px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-semibold hover:from-yellow-600 hover:to-yellow-400 focus:outline-none ring-2 ring-yellow-500 ring-opacity-50;
 }
 @font-face {
-    font-family: 'custom1';
-    src: url('../components/fonts/ananda-neptouch.ttf') format('truetype');
-    /* Additional font properties can be specified here */
-  }
+  font-family: "custom1";
+  src: url("../components/fonts/ananda-neptouch.ttf") format("truetype");
+  /* Additional font properties can be specified here */
+}
 .rasam-font {
-  font-family: "custom1",sans-serif;
+  font-family: "custom1", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -49,20 +55,23 @@ html {
   font-weight: 400;
   font-style: normal;
 }
-.date-font{
+.date-font {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.home-hashtag{
+.home-hashtag {
   letter-spacing: 6px;
 }
+.running-shadow {
+  text-shadow: 2px 2px #eee;
+}
 @media (max-width: 640px) {
-    .home-round {
-      border-top-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-    .home-hashtag{
-      letter-spacing: 2px;
-    }
+  .home-round {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
+  .home-hashtag {
+    letter-spacing: 2px;
+  }
+}

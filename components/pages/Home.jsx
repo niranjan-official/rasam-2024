@@ -1,19 +1,25 @@
-
 import Image from "next/image";
 import React from "react";
 import rasamFont from "@/public/images/rasam-font.svg";
 import Counter from "../Counter";
-import { MotionH1 } from "../MotionComponent";
+import { MotionDiv, MotionH1, MotionSpan } from "../MotionComponent";
 
 const Home = () => {
+  const numbers = ["25", "26", "27"];
+
   return (
     <section
       id="home"
-      className="min-h-screen w-full flex justify-center home-bg md:p-8 lg:p-16 lg:pl-28 lg:pr-16"
+      className="min-h-screen w-full flex justify-center items-center home-bg md:p-8 lg:p-16 lg:pl-28 lg:pr-16"
     >
       <div className="w-full h-full flex flex-col items-center justify-center pt-24">
-        
-        <div className="w-full h-auto md:px-24 lg:px-56">
+        <MotionDiv
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="w-full h-auto md:px-24 lg:px-56"
+        >
           <Image
             className="opacity-65"
             src={rasamFont}
@@ -22,23 +28,41 @@ const Home = () => {
             alt="font"
             style={{ height: "auto", width: "100%" }}
           />
-        </div>
-        
+        </MotionDiv>
+
         <MotionH1
-          whileHover={{ scale: 1.2 , rotate: '5deg'}}
-          whileTap={{ scale: 1.1 }}
-          className="text-red-100 text-md sm:text-xl lg:text-3xl home-hashtag"
-        
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="text-red-100 text-md sm:text- lg:text-2xl home-hashtag"
         >
-          #KelkanOru<span className="font-bold">Rasam</span>KananOru<span className="font-bold">Kothi</span>
+          #KelkanOru<span className="font-bold">Rasam</span>KananOru
+          <span className="font-bold">Kothi</span>
         </MotionH1>
         <div className="flex flex-col items-center text-white gap-3 p-1 mt-10">
-          <h1 className="text-3xl sm:text-5xl date-font">25 | 26 | 27</h1>
-          <h2 className="text-2xl sm:text-4xl pl-4 amita-regular" style={{ letterSpacing: "22px" }}>
+          <h1 className="text-3xl sm:text-5xl date-font">
+            {/* {numbers.map((number, index) => (
+        <MotionSpan
+        key={index}
+        initial={{ scale: 0 }}
+        animate={{scale: [0, 1.2, 1]}}
+        transition={{ duration: 0.5, delay: index+1 * 0.1 }}
+        style={{ display: "inline-block", marginRight: "0.5rem" }}
+        >
+          {number}
+        </MotionSpan>
+      ))} */}
+            25 | 26 | 27
+          </h1>
+
+          <h2
+            className="text-2xl sm:text-4xl pl-4 font-bold"
+            style={{ letterSpacing: "22px" }}
+          >
             MARCH
           </h2>
         </div>
-        {/* <button className="button mt-5">Register Now</button> */}
       </div>
     </section>
   );

@@ -1,26 +1,39 @@
 import React from "react";
 import Heading from "../Heading";
 import Counter from "../Counter";
+import { MotionH1 } from "../MotionComponent";
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen w-full px-4 md:px-10 lg:px-24">
-      <Heading title={'About'}/>
-      <div className="w-full h-max lg:min-h-screen flex flex-col md:flex-row ">
+    <section
+      id="about"
+      className="h-max w-full px-4 md:px-10 lg:px-28 about-bg"
+    >
+      <Heading title={"About"} />
+      <div className="w-full h-max flex flex-col md:flex-row ">
         <div className="md:w-1/2 flex flex-col py-4">
-          <h2 className="text-white poppins-medium">
-            Welcome to <span className="text-secondary font-bold">RASAM {" "}</span>
+          <MotionH1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="text-white poppins-medium"
+          >
+            Welcome to <span className="text-secondary font-bold">RASAM </span>
             <span className="text-secondary font-bold">2024</span>
-          </h2>
+          </MotionH1>
           <p className="text-white poppins-medium mt-4 text-justify md:text-left lg:pr-8 leading-relaxed lg:leading-loose">
-            RASAM is the flagship event of Providence college of enginering and
-            school of buisness. It gives aspiring managers a taste of challenges
-            to come and attracts the most talented and competitive management
-            students from various parts of the country. This international fest
-            tests the budding professionals on various aspects of teamwork,
-            logical thinking, analytical and mental grit. RASAM’24 will be
-            conducted offline as enthusiastically as last year with high spirits
-            of the students.
+            RASAM, an esteemed annual extravaganza, unites a tapestry of
+            students, professionals, and enthusiasts across myriad domains,
+            igniting the stage with their ingenuity, fueling innovation, and
+            reveling in the essence of creativity. In its fourth edition, RASAM
+            transcended boundaries, drawing participants from distant horizons.
+            Entering its fifth spectacular season, RASAM stands as a beacon of
+            creativity, uniting talents, professionals, and enthusiasts in a
+            grand celebration of innovation and expression. RASAM promises a
+            captivating voyage through an enchanting world of imagination, with
+            an exhilarating lineup of events and proshows that promise to leave
+            an indelible mark on all who participate.
           </p>
         </div>
         <div className="md:w-1/2 flex flex-col items-center pt-8 text-white">
@@ -41,7 +54,7 @@ const About = () => {
             </svg>
             <p className="text-2xl poppins-regular">Countdown</p>
           </div>
-          <Counter/>
+          <Counter />
         </div>
       </div>
     </section>
