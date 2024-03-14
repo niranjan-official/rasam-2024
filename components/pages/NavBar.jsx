@@ -1,17 +1,43 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Image from "next/image";
 
 const NavBar = () => {
+  const [activeSection, setActiveSection] = useState("home");
+  const active = "text-white";
+  const mobileActive = " bg-slate-300 bg-opacity-20 rounded-md";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section"); // assuming sections have unique IDs
+      const scrollPosition = window.scrollY;
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -19,7 +45,9 @@ const NavBar = () => {
         <div className="w-full h-full flex flex-col items-center justify-evenly text-xs font-semibold text-slate-300 rounded-3xl">
           <Link
             href="#home"
-            className="flex flex-col items-center hover:text-white "
+            className={`flex flex-col items-center ${
+              activeSection === "home" ? active : ""
+            } hover:text-white `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +64,9 @@ const NavBar = () => {
           </Link>
           <Link
             href="#about"
-            className="flex flex-col items-center gap-1 hover:text-white"
+            className={`flex flex-col items-center ${
+              activeSection === "about" ? active : ""
+            } hover:text-white `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +88,9 @@ const NavBar = () => {
           </Link>
           <Link
             href={"#events"}
-            className="flex flex-col items-center hover:text-white"
+            className={`flex flex-col items-center ${
+              activeSection === "events" ? active : ""
+            } hover:text-white `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +107,9 @@ const NavBar = () => {
           </Link>
           <Link
             href={"#gallery"}
-            className="flex flex-col items-center hover:text-white"
+            className={`flex flex-col items-center ${
+              activeSection === "gallery" ? active : ""
+            } hover:text-white `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +128,7 @@ const NavBar = () => {
       </div>
       <div className="fixed top-5 left-5 lg:hidden z-50">
         <Sheet>
-          <SheetTrigger>
+          <SheetTrigger asChild className="focus:outline-none focus:ring-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -108,18 +142,59 @@ const NavBar = () => {
               />
             </svg>
           </SheetTrigger>
-          <SheetContent side={"left"} className="border-none shadow-sm backdrop-filter backdrop-blur-md ">
-           <div className="w-full flex flex-col p-4">
-            <Image width={100} height={50} alt="..." src={"/images/rasam-font.svg"}/>
-            <hr className="b-2 border-gray-400 my-4"/>
-            <div className="flex flex-col text-white gap-4 text-2xl">
-              <h2 className="p-2 bg-slate-300 bg-opacity-20 rounded-md">Home</h2>
-              <h2 className="p-2 rounded-md">About</h2>
-              <h2 className="p-2 rounded-md">Events</h2>
-              <h2 className="p-2 rounded-md">Pro-Show</h2>
-              <h2 className="p-2 rounded-md">Gallery</h2>
+          <SheetContent
+            side={"left"}
+            className="border-none shadow-sm backdrop-filter backdrop-blur-md "
+          >
+            <div className="w-full flex flex-col p-4">
+              <Image
+                width={100}
+                height={50}
+                alt="..."
+                src={"/images/rasam-font.svg"}
+              />
+              <hr className="b-2 border-gray-400 my-4" />
+              <div className="flex flex-col text-white gap-4 text-2xl">
+                <SheetClose asChild>
+                  <Link
+                    href={"#home"}
+                    className={`p-2 ${
+                      activeSection === "home" ? mobileActive : ""
+                    } hover:text-white `}
+                  >
+                    Home
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href={"#about"} className={`p-2 ${
+                      activeSection === "about" ? mobileActive : ""
+                    } hover:text-white `}>
+                    About
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href={"#events"} className={`p-2 ${
+                      activeSection === "events" ? mobileActive : ""
+                    } hover:text-white `}>
+                    Events
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href={"#pro-show"} className={`p-2 ${
+                      activeSection === "pro-show" ? mobileActive : ""
+                    } hover:text-white `}>
+                    Pro-Show
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href={"#gallery"} className={`p-2 ${
+                      activeSection === "gallery" ? mobileActive : ""
+                    } hover:text-white `}>
+                    Gallery
+                  </Link>
+                </SheetClose>
+              </div>
             </div>
-           </div>
           </SheetContent>
         </Sheet>
       </div>

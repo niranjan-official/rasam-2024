@@ -26,7 +26,7 @@ export default async function Main() {
   return (
     <main className="flex h-max flex-col bg-black">
       <Home />
-      {/* <RunningTheme/> */}
+      <RunningTheme/>
       <About />
       <Events images={data[0]}/>
       <Gallery gallery={data[1]}/>
