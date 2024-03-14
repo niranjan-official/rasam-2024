@@ -4,7 +4,7 @@ import Image from 'next/image';
 import logo from "@/public/images/providence.png"
 const Footer = () => {
   return (
-    <div className="flex flex-col md:flex-row pb-5 text-white bg-slate-950 py-4 justify-between sm:pl-36 pr-4 items-center">
+    <div className="flex flex-col md:flex-row pb-5 text-white bg-slate-950 py-4 justify-between sm:pl-36 sm:pr-4 items-center">
       <div className="flex flex-col pb-10 md:pb-0">
         <h1 className="font-serif text-white text-3xl">Get in Touch</h1>
         <div className="flex flex-row justify-evenly items-center pt-3">

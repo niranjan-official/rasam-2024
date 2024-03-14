@@ -12,7 +12,7 @@ const Home = () => {
       id="home"
       className="min-h-screen w-full flex justify-center items-center home-bg md:p-8 lg:p-16 lg:pl-28 lg:pr-16"
     >
-      <div className="w-full h-full flex flex-col items-center justify-center pt-24">
+      <div className="w-full h-full flex flex-col items-center justify-center pt-12 sm:pt-24">
         <MotionDiv
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
