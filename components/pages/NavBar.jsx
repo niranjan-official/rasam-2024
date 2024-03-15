@@ -146,10 +146,11 @@ const NavBar = () => {
             side={"left"}
             className="border-none shadow-sm backdrop-filter backdrop-blur-md "
           >
-            <div className="w-full flex flex-col p-4">
+            <div className="w-full flex flex-col p-4 pl-1">
               <Image
-                width={100}
-                height={50}
+                width={150}
+                
+                height={100}
                 alt="..."
                 src={"/images/rasam-font.svg"}
               />
