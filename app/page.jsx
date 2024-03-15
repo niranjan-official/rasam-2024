@@ -7,6 +7,8 @@ import Footer from "@/components/pages/Footer";
 import { db } from "@/firebase/config";
 import { collection, getDocs } from "firebase/firestore";
 import RunningTheme from "@/components/RunningTheme";
+import Head from 'next/head'
+
 
 const fetchData = async () => {
   let data = [];
@@ -25,6 +27,12 @@ export default async function Main() {
 
   return (
     <main className="flex h-max flex-col bg-black">
+      <link
+  rel="icon"
+  href="/icon?<generated>"
+  type="image/<generated>"
+  sizes="<generated>"
+/>
       <Home />
       <RunningTheme/>
       <About />
