@@ -4,7 +4,7 @@ import React,{useEffect, useState} from "react";
 import rasamFont from "@/public/images/rasam-font.svg"; 
 import { MotionDiv, MotionH1, MotionSpan } from "../MotionComponent";
 import HomePageDate from "../HomePageDate";
-import LandingPage from "../landingpage";
+import LandingPage from "../landingPage";
 
 
 const Home = () => {
