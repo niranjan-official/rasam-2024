@@ -11,16 +11,16 @@ const RunningTheme = () => {
       <marquee className="flex text-6xl md:text-8xl" behavior="" direction="">
         <h1>
           THE NEXT LEVEL 
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL 
         </h1>
       </marquee>
     </div>

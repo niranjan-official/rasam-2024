@@ -21,7 +21,7 @@ const ReactMaterialCarousel = ({ images }) => {
             src={obj}
             width={900}
             height={900}
-            className="rounded-3xl h-auto w-full "
+            className="rounded-3xl w-full h-auto "
           />
         ))}
       </Carousel>
