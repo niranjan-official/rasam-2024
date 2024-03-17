@@ -8,8 +8,18 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
+  const path = usePathname();
+  const [isEventPage, setIsEventPage] = useState(false);
+
+  useEffect(() => {
+    console.log("Path: " + path);
+    if (path.includes("/events")) {
+      setIsEventPage(true);
+    }
+  }, [path]);
   const [activeSection, setActiveSection] = useState("home");
   const active = "text-white";
   const mobileActive = " bg-slate-300 bg-opacity-20 rounded-md";
@@ -44,7 +54,7 @@ const NavBar = () => {
       <div className="w-24 h-full fixed top-0 left-0 p-4 backdrop-filter backdrop-blur-xl z-50 hidden lg:block">
         <div className="w-full h-full flex flex-col items-center justify-evenly text-xs font-semibold text-slate-300 rounded-3xl">
           <Link
-            href="#home"
+            href={isEventPage ? "/#home" : "#home"}
             className={`flex flex-col items-center ${
               activeSection === "home" ? active : ""
             } hover:text-white `}
@@ -63,7 +73,7 @@ const NavBar = () => {
             </svg>
           </Link>
           <Link
-            href="#about"
+            href={isEventPage ? "/#about" : "#about"}
             className={`flex flex-col items-center ${
               activeSection === "about" ? active : ""
             } hover:text-white `}
@@ -87,7 +97,7 @@ const NavBar = () => {
             </svg>
           </Link>
           <Link
-            href={"#events"}
+            href={isEventPage ? "/#events" : "#events"}
             className={`flex flex-col items-center ${
               activeSection === "events" ? active : ""
             } hover:text-white `}
@@ -106,7 +116,22 @@ const NavBar = () => {
             </svg>
           </Link>
           <Link
-            href={"#gallery"}
+            href={isEventPage ? "/#proshow" : "#proshow"}
+            className={`flex flex-col items-center ${
+              activeSection === "proshow" ? active : ""
+            } hover:text-white `}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-9 h-9"
+            >
+              <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
+            </svg>
+          </Link>
+          <Link
+            href={isEventPage ? "/#gallery" : "#gallery"}
             className={`flex flex-col items-center ${
               activeSection === "gallery" ? active : ""
             } hover:text-white `}
@@ -149,7 +174,6 @@ const NavBar = () => {
             <div className="w-full flex flex-col p-4 pl-1">
               <Image
                 width={150}
-                
                 height={100}
                 alt="..."
                 src={"/images/rasam-font.svg"}
@@ -158,7 +182,7 @@ const NavBar = () => {
               <div className="flex flex-col text-white gap-4 text-2xl">
                 <SheetClose asChild>
                   <Link
-                    href={"#home"}
+                    href={isEventPage ? "/#home" : "#home"}
                     className={`p-2 ${
                       activeSection === "home" ? mobileActive : ""
                     } hover:text-white `}
@@ -167,30 +191,42 @@ const NavBar = () => {
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href={"#about"} className={`p-2 ${
+                  <Link
+                    href={isEventPage ? "/#about" : "#about"}
+                    className={`p-2 ${
                       activeSection === "about" ? mobileActive : ""
-                    } hover:text-white `}>
+                    } hover:text-white `}
+                  >
                     About
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href={"#events"} className={`p-2 ${
+                  <Link
+                    href={isEventPage ? "/#events" : "#events"}
+                    className={`p-2 ${
                       activeSection === "events" ? mobileActive : ""
-                    } hover:text-white `}>
+                    } hover:text-white `}
+                  >
                     Events
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href={"#proshow"} className={`p-2 ${
+                  <Link
+                    href={isEventPage ? "/#proshow" : "#proshow"}
+                    className={`p-2 ${
                       activeSection === "proshow" ? mobileActive : ""
-                    } hover:text-white `}>
+                    } hover:text-white `}
+                  >
                     Pro Show
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href={"#gallery"} className={`p-2 ${
+                  <Link
+                    href={isEventPage ? "/gallery" : "#gallery"}
+                    className={`p-2 ${
                       activeSection === "gallery" ? mobileActive : ""
-                    } hover:text-white `}>
+                    } hover:text-white `}
+                  >
                     Gallery
                   </Link>
                 </SheetClose>
