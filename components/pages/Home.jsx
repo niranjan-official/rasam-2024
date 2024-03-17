@@ -1,23 +1,33 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React,{useEffect, useState} from "react";
 import rasamFont from "@/public/images/rasam-font.svg"; 
 import { MotionDiv, MotionH1, MotionSpan } from "../MotionComponent";
 import HomePageDate from "../HomePageDate";
+import LandingPage from "../landingpage";
+
 
 const Home = () => {
   const numbers = ["25", "|", "26", "|", "27"];
+  const [load,setLoad]=useState(true);
+  useEffect(()=>{
+    setTimeout(() => {
+      setLoad(false);
+    }, 5000);
+  },[]);
 
   return (
     <section
       id="home"
       className="min-h-screen w-full flex justify-center items-center home-bg md:p-8 lg:p-16 lg:pl-28 lg:pr-16"
     >
+       {load && <LandingPage/>}
       <div className="w-full h-full flex flex-col items-center justify-center pt-12 sm:pt-24">
         <MotionDiv
           initial={{ opacity: 0,}}
           whileInView={{ opacity: 1}}
           viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          transition={{ duration: 1.5,delay:5, ease: "easeInOut" }}
           className="w-full h-auto md:px-24 lg:px-56"
         >
           <Image
@@ -34,7 +44,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1,delay:5, ease: "easeInOut" }}
           className="text-red-100 text-md sm:text- lg:text-2xl home-hashtag select-none"
         >
           #KelkanOru<span className="font-bold">Rasam</span>KananOru

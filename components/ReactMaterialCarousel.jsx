@@ -7,7 +7,7 @@ const ReactMaterialCarousel = ({ images }) => {
   const CarouselImages = images?.images?.image;
   console.log(CarouselImages[1]);
   return (
-    <div className="h-auto w-full md:w-1/2 ">
+    <div className="h-auto w-full md:w-1/2 z-40">
       <Carousel
         autoPlay={true}
         stopAutoPlayOnHover={true}
