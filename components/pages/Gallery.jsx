@@ -3,6 +3,7 @@ import Heading from "../Heading";
 import ReactMaterialCarousel from "../ReactMaterialCarousel";
 
 
+
 const Gallery = ({gallery}) => {
   return (
     <section

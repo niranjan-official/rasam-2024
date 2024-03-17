@@ -7,6 +7,7 @@ import { collection, getDocs } from "firebase/firestore";
 import RunningTheme from "@/components/RunningTheme";
 import ProShow from "@/components/pages/ProShow";
 
+
 const fetchData = async () => {
   let data = [];
   const querySnapshot = await getDocs(collection(db, "images"));
@@ -22,6 +23,7 @@ export default async function Main() {
 
   return (
     <main className="flex h-max flex-col bg-black">
+
       <Home />
       <RunningTheme/>
       <About />
