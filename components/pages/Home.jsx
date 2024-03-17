@@ -35,7 +35,7 @@ const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="text-red-100 text-md sm:text- lg:text-2xl home-hashtag"
+          className="text-red-100 text-md sm:text- lg:text-2xl home-hashtag select-none"
         >
           #KelkanOru<span className="font-bold">Rasam</span>KananOru
           <span className="font-bold">Kothi</span>

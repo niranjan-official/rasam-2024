@@ -16,6 +16,7 @@ const HomePageDate = () => {
                         animate={{ scale: [0, 2, 1] }}
                         transition={{ duration: 0.5, delay: index * 0.08 }}
                         style={{ display: "inline-block", marginRight: "0.5rem" }}
+                        className="select-none"
                     >
                         {number}
                     </motion.span>
@@ -26,7 +27,7 @@ const HomePageDate = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
-                    className="text-2xl sm:text-4xl pl-4 font-bold"
+                    className="text-2xl sm:text-4xl pl-4 font-bold select-none"
                     style={{ letterSpacing: "22px" }}
                 >
                     MARCH
