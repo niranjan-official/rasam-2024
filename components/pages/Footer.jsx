@@ -6,27 +6,27 @@ const Footer = () => {
   return (
     <div className="flex flex-col md:flex-row pb-5 text-white bg-slate-950 py-4 justify-between sm:pl-36 sm:pr-4 items-center">
       <div className="flex flex-col pb-10 md:pb-0">
-        <h1 className="font-serif text-white text-3xl">Get in Touch</h1>
+        <h1 className="font-serif text-white text-3xl select-none">Get in Touch</h1>
         <div className="flex flex-row justify-evenly items-center pt-3">
         <SocialIcon
           network="instagram"
           url="https://www.instagram.com/rasam.by.providence?igsh=Nnd3YnFpaGplM3kw"
-          bgColor="#FFFFFF"
-          fgColor="red"
+          bgColor="#9B0000"
+          fgColor="white"
           style={{ width: "40px", height: "40px" }}
         />
         <SocialIcon
           network="youtube"
           url="https://www.youtube.com/@prvdnc"
-          bgColor="#FFFFFF"
-          fgColor="red"
+          bgColor="#9B0000"
+          fgColor="white"
           style={{ width: "40px", height: "40px" }}
         />
         <SocialIcon
           network="facebook"
           url="https://www.facebook.com/rasambyprovidence?mibextid=ZbWKwL"
-          bgColor="#FFFFFF"
-          fgColor="blue"
+          bgColor="#9B0000"
+          fgColor="white"
           style={{ width: "40px", height: "40px" }}
         />
         </div>
