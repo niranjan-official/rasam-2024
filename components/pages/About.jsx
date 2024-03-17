@@ -17,16 +17,18 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="text-white poppins-medium"
+            className="text-white poppins-medium select-none"
           >
             Welcome to <span className="text-secondary font-bold">RASAM </span>
             <span className="text-secondary font-bold">2024</span>
           </MotionH1>
-          <p className="text-white poppins-medium mt-4 text-justify md:text-left lg:pr-8 leading-relaxed lg:leading-loose">
+          <p className="text-white poppins-medium mt-4 text-justify md:text-left lg:pr-8 leading-relaxed lg:leading-loose select-none">
             RASAM, an esteemed annual extravaganza, unites a tapestry of
             students, professionals, and enthusiasts across myriad domains,
             igniting the stage with their ingenuity, fueling innovation, and
-            reveling in the essence of creativity. In its fifth edition, RASAM
+            reveling in the essence of creativity. </p>
+            <p className="text-white poppins-medium mt-4 text-justify md:text-left lg:pr-8 leading-relaxed lg:leading-loose select-none">
+             {" "}In its fifth edition, RASAM
             transcended boundaries, drawing participants from distant horizons.
             Entering its fifth spectacular season, RASAM stands as a beacon of
             creativity, uniting talents, professionals, and enthusiasts in a
@@ -36,7 +38,7 @@ const About = () => {
             an indelible mark on all who participate.
           </p>
         </div>
-        <div className="md:w-1/2 flex flex-col items-center pt-8 text-white">
+        <div className="md:w-1/2 flex flex-col items-center pt-8 text-white select-none">
           <div className="poppins-medium flex items-center lg:text-xl mb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

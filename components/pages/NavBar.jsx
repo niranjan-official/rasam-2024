@@ -181,10 +181,10 @@ const NavBar = () => {
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href={"#pro-show"} className={`p-2 ${
-                      activeSection === "pro-show" ? mobileActive : ""
+                  <Link href={"#proshow"} className={`p-2 ${
+                      activeSection === "proshow" ? mobileActive : ""
                     } hover:text-white `}>
-                    Pro-Show
+                    Pro Show
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
