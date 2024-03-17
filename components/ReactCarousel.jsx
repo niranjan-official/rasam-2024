@@ -38,7 +38,7 @@ const ReactCarousel = ({ images }) => {
             {CarouselImages.map((obj, index) => (
                 <div className='p-3 sm:px-5 relative' key={index}>
                 <Image width={300} height={300} src={obj.image} alt="..." className='hover:scale-110 transition duration-200 cursor-pointer'/>
-                <button onClick={()=>router.push(`/events/${index}`)} className='absolute left-1/2 bottom-5 xl:left-1/3 transform -translate-x-1/2 -translate-y-1/2 p-2 px-4 backdrop-filter backdrop-blur-lg text-lg shadow-md rounded-lg'>Know More</button>
+                <button onClick={()=>router.push(`/events/${index}`)} className='absolute left-1/2 bottom-5 xl:left-1/3 transform -translate-x-1/2 -translate-y-1/2 p-2 px-4 backdrop-filter backdrop-blur-lg text-lg shadow-md rounded-2xl'>Know More</button>
               </div>
             ))}
         </Carousel>

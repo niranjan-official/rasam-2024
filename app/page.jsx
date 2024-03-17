@@ -7,8 +7,7 @@ import Footer from "@/components/pages/Footer";
 import { db } from "@/firebase/config";
 import { collection, getDocs } from "firebase/firestore";
 import RunningTheme from "@/components/RunningTheme";
-import Head from 'next/head'
-
+import ProShow from "@/components/pages/ProShow";
 
 const fetchData = async () => {
   let data = [];
@@ -37,6 +36,7 @@ export default async function Main() {
       <RunningTheme/>
       <About />
       <Events images={data[0]}/>
+      <ProShow/>
       <Gallery gallery={data[1]}/>
     </main>
   );
