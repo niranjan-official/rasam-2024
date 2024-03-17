@@ -20,12 +20,12 @@ const Counter = () => {
   }, []);
 
   return (
-    <div className=" flex flex-row text-white  poppins-semibold">
+    <div className=" flex flex-row text-red-500  poppins-semibold">
     <div className="flex flex-col justify-center items-center">
       <div className="text-3xl md:text-4xl lg:text-7xl">
         {days < 10 ? "0" + days : days}
       </div>
-      <p className="underline text-xs text-secondary">Days</p>
+      <p className="underline text-xs text-secondary text-white">Days</p>
     </div>
 
     <p className="text-3xl md:text-4xl lg:text-7xl ml-2 mr-2">:</p>
@@ -35,7 +35,7 @@ const Counter = () => {
         {hours < 10 ? "0" + hours : hours}
       </div>
 
-      <p className="underline text-xs text-secondary">Hours</p>
+      <p className="underline text-xs text-secondary text-white">Hours</p>
     </div>
 
     <p className="text-3xl md:text-4xl lg:text-7xl ml-2 mr-2">:</p>
@@ -45,7 +45,7 @@ const Counter = () => {
         {mins < 10 ? "0" + mins : mins}
       </div>
 
-      <p className="underline text-xs text-secondary">Minutes</p>
+      <p className="underline text-xs text-secondary text-white">Minutes</p>
     </div>
 
     <p className="text-3xl md:text-4xl lg:text-7xl ml-2 mr-2">:</p>
@@ -55,7 +55,7 @@ const Counter = () => {
         {secs < 10 ? "0" + secs : secs}
       </div>
 
-      <p className="underline text-xs text-secondary">Seconds</p>
+      <p className="underline text-xs text-secondary text-white">Seconds</p>
     </div>
   </div>
   );

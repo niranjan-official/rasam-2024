@@ -6,9 +6,9 @@ const londrina = Londrina_Outline({ subsets: ["latin"], weight: "400" });
 const RunningTheme = () => {
   return (
     <div
-      className={`w-full h-max ${londrina.className} flex text-zinc-400 py-8 lg:pl-28 overflow-x-hidden`}
+      className={`w-full h-max ${londrina.className} flex text-zinc-500 py-8 lg:pl-28 overflow-x-hidden`}
     >
-      <marquee className="flex text-6xl" behavior="" direction="">
+      <marquee className="flex text-6xl md:text-8xl" behavior="" direction="">
         <h1>
           THE NEXT LEVEL 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; THE NEXT LEVEL

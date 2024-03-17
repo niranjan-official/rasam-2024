@@ -8,7 +8,7 @@ const Heading = ({ title }) => {
     whileInView={{opacity: 1, y: 0}}
     viewport={{once: true}}
     transition={{ duration: 0.5, ease: 'easeInOut' }}
-    style={{fontWeight: '800'}} className="text-7xl md:text-8xl text-white text-opacity-30 my-8">
+    style={{fontWeight: '800'}} className="text-7xl md:text-8xl text-white text-opacity-30 my-8 select-none">
       {title}
     </MotionH1>
   );

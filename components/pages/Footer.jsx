@@ -10,20 +10,23 @@ const Footer = () => {
         <div className="flex flex-row justify-evenly items-center pt-3">
         <SocialIcon
           network="instagram"
-          bgColor="#bf190d"
-          fgColor="white"
+          url="https://www.instagram.com/rasam.by.providence?igsh=Nnd3YnFpaGplM3kw"
+          bgColor="#FFFFFF"
+          fgColor="red"
           style={{ width: "40px", height: "40px" }}
         />
         <SocialIcon
-          network="whatsapp"
-          bgColor="#bf190d"
-          fgColor="white"
+          network="youtube"
+          url="https://www.youtube.com/@prvdnc"
+          bgColor="#FFFFFF"
+          fgColor="red"
           style={{ width: "40px", height: "40px" }}
         />
         <SocialIcon
           network="facebook"
-          bgColor="#bf190d"
-          fgColor="white"
+          url="https://www.facebook.com/rasambyprovidence?mibextid=ZbWKwL"
+          bgColor="#FFFFFF"
+          fgColor="blue"
           style={{ width: "40px", height: "40px" }}
         />
         </div>
