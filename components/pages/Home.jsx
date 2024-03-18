@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen w-full flex justify-center items-center home-bg md:p-8 lg:p-16 lg:pl-28 lg:pr-16"
+      className="min-h-screen w-full flex justify-center items-center home-bg md:p-8 lg:p-16 lg:pl-28 lg:pr-16 z-40"
     >
        {load && <LandingPage/>}
       <div className="w-full h-full flex flex-col items-center justify-center pt-12 sm:pt-24">

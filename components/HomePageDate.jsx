@@ -1,13 +1,15 @@
 'use client'
 import { motion } from 'framer-motion'
 import React from 'react'
+import { Yeseva_One } from 'next/font/google'
+const yeseva = Yeseva_One({ subsets: ["latin"], weight: "400" });
 
 const HomePageDate = () => {
     const numbers = ["25", "|", "26", "|", "27"];
     return (
         <div className="flex flex-col items-center text-white gap-3 p-1 mt-10">
 
-            <h1 className="text-3xl sm:text-5xl font-serif">
+            <h1 className={`text-3xl sm:text-5xl ${yeseva.className}`}>
               
                 {numbers.map((number, index) => (
                     <motion.span

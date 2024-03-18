@@ -20,6 +20,12 @@ const NavBar = () => {
       setIsEventPage(true);
     }
   }, [path]);
+  const [triggerColor, setTriggerColor] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setTriggerColor(false)
+    }, 5000);
+  }, []);
   const [activeSection, setActiveSection] = useState("home");
   const active = "text-white";
   const mobileActive = " bg-slate-300 bg-opacity-20 rounded-md";
@@ -52,11 +58,11 @@ const NavBar = () => {
   return (
     <>
       <div className="w-24 h-full fixed top-0 left-0 p-4 backdrop-filter backdrop-blur-xl z-50 hidden lg:block">
-        <div className="w-full h-full flex flex-col items-center justify-evenly text-xs font-semibold text-slate-300 rounded-3xl">
+        <div className={`w-full h-full flex flex-col items-center justify-evenly text-xs font-semibold ${triggerColor ? 'text-black' : 'text-slate-300'} rounded-3xl`}>
           <Link
             href={isEventPage ? "/#home" : "#home"}
             className={`flex flex-col items-center ${
-              activeSection === "home" ? active : ""
+              activeSection && !triggerColor === "home" ? active : ""
             } hover:text-white `}
           >
             <svg
@@ -75,7 +81,7 @@ const NavBar = () => {
           <Link
             href={isEventPage ? "/#about" : "#about"}
             className={`flex flex-col items-center ${
-              activeSection === "about" ? active : ""
+              activeSection && !triggerColor === "about" ? active : ""
             } hover:text-white `}
           >
             <svg
@@ -99,7 +105,7 @@ const NavBar = () => {
           <Link
             href={isEventPage ? "/#events" : "#events"}
             className={`flex flex-col items-center ${
-              activeSection === "events" ? active : ""
+              activeSection && !triggerColor === "events" ? active : ""
             } hover:text-white `}
           >
             <svg
@@ -118,7 +124,7 @@ const NavBar = () => {
           <Link
             href={isEventPage ? "/#proshow" : "#proshow"}
             className={`flex flex-col items-center ${
-              activeSection === "proshow" ? active : ""
+              activeSection && !triggerColor === "proshow" ? active : ""
             } hover:text-white `}
           >
             <svg
@@ -133,7 +139,7 @@ const NavBar = () => {
           <Link
             href={isEventPage ? "/#gallery" : "#gallery"}
             className={`flex flex-col items-center ${
-              activeSection === "gallery" ? active : ""
+              activeSection && !triggerColor === "gallery" ? active : ""
             } hover:text-white `}
           >
             <svg
@@ -158,7 +164,7 @@ const NavBar = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="w-10 h-10 text-yellow-700"
+              className={`w-10 h-10 ${triggerColor ? 'text-black' : 'text-yellow-700'}`}
             >
               <path
                 fillRule="evenodd"

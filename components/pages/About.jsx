@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="h-max w-full px-4 md:px-10 lg:px-28 about-bg"
+      className="h-max w-full px-4 md:px-10 lg:px-28 about-bg z-10"
     >
       <Heading title={"About"} />
       <div className="w-full h-max flex flex-col md:flex-row ">
