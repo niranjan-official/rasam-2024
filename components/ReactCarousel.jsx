@@ -34,7 +34,7 @@ const ReactCarousel = ({ images }) => {
     const CarouselImages = images.images.image;
     //console.log(CarouselImages, "here");
     return (
-        <Carousel responsive={responsive} className='w-full flex h-full' partialVisible={true} infinite={true} autoPlay={true} autoPlaySpeed={3000} removeArrowOnDeviceType={['mobile','tablet']}>
+        <Carousel responsive={responsive} className='w-full flex h-full z-10' partialVisible={true} infinite={true} autoPlay={true} autoPlaySpeed={3000} removeArrowOnDeviceType={['mobile','tablet']}>
             {CarouselImages.map((obj, index) => (
                 <div className='p-3 sm:px-5 relative' key={index}>
                 <Image width={300} height={300} src={obj.image} alt="..." className='hover:scale-110 transition duration-200 cursor-pointer'/>

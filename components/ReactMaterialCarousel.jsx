@@ -7,7 +7,7 @@ const ReactMaterialCarousel = ({ images }) => {
   const CarouselImages = images?.images?.image;
   console.log(CarouselImages[1]);
   return (
-    <div className="h-auto w-full md:w-1/2 z-40">
+    <div className="h-auto w-full md:w-1/2 z-10">
       <Carousel
         autoPlay={true}
         stopAutoPlayOnHover={true}
@@ -18,6 +18,7 @@ const ReactMaterialCarousel = ({ images }) => {
       >
         {CarouselImages.map((obj, index) => (
           <Image
+            key={index}
             src={obj}
             width={900}
             height={900}

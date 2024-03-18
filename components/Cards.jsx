@@ -43,7 +43,7 @@ const Cards = () => {
 
   return (
     <Card className="rounded-2xl text-red mb-10 border-none shadow-zinc-400 shadow-xl " >
-      <Image alt="..."  src={"/images/coming6.svg"} width={500} height={500} className="rounded-2xl"/>
+      <Image alt="..."  src={"/images/coming6.svg"} width={500} height={500} className="rounded-2xl z-10"/>
       </Card>
 
 
