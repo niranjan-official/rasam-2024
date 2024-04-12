@@ -23,7 +23,7 @@ const Counter = () => {
     <div className=" flex flex-row text-red-500  poppins-semibold">
     <div className="flex flex-col justify-center items-center">
       <div className="text-3xl md:text-4xl lg:text-7xl">
-        {days < 10 ? "0" + days : days}
+        00
       </div>
       <p className="underline text-xs text-secondary text-white">Days</p>
     </div>
@@ -32,7 +32,7 @@ const Counter = () => {
 
     <div className="flex flex-col justify-center items-center">
       <div className="text-3xl md:text-4xl lg:text-7xl">
-        {hours < 10 ? "0" + hours : hours}
+        00
       </div>
 
       <p className="underline text-xs text-secondary text-white">Hours</p>
@@ -42,7 +42,7 @@ const Counter = () => {
 
     <div className="flex flex-col justify-center items-center">
       <div className="text-3xl md:text-4xl lg:text-7xl">
-        {mins < 10 ? "0" + mins : mins}
+        00
       </div>
 
       <p className="underline text-xs text-secondary text-white">Minutes</p>
@@ -52,7 +52,7 @@ const Counter = () => {
 
     <div className="flex flex-col justify-center items-center">
       <div className=" text-3xl md:text-4xl lg:text-7xl">
-        {secs < 10 ? "0" + secs : secs}
+        00
       </div>
 
       <p className="underline text-xs text-secondary text-white">Seconds</p>
