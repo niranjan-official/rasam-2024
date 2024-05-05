@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rasam'24
+
+Welcome to Rasam'24, the official website for the annual cultural fest of Providence College of Engineering.
+
+## About
+
+Rasam'24 is a celebration of culture, creativity, and talent. Organized by PRC's student body, this event brings together students from various disciplines to showcase their skills, participate in competitions, and enjoy a multitude of cultural activities.
+
+## Features
+
+- **Next.js**: Built with Next.js, a React framework for production-grade applications.
+- **Shadecn UI Library**: Utilizes Shadecn UI library for sleek and modern UI components.
+- **Framer Motion**: Incorporates Framer Motion for smooth animations and transitions.
+- **Tailwind CSS**: Styled with Tailwind CSS for rapid and customizable styling.
+- **NPM Libraries**: Includes various NPM libraries for carousels, galleries, and other functionalities.
+
+## Pages
+
+1. **Home**: The landing page welcoming visitors and providing an overview of the fest.
+2. **About**: Details about Rasam'24, its history, mission, and organizing team.
+3. **Events**: Information about the various competitions, performances, and activities scheduled during the fest.
+4. **Pro-Show**: Highlights the main attractions and headline events of Rasam'24.
+5. **Gallery**: A collection of photos and videos capturing memorable moments from past editions of Rasam.
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running follow these simple steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository.
+2. Install dependencies with `npm install`.
+3. Start the development server with `npm run dev`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
