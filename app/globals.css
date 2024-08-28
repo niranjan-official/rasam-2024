@@ -7,23 +7,11 @@ html {
   scroll-behavior: smooth !important;
 }
 .home-bg {
-  background: url("../public/images/hellsweeper.jpg");
+  background: url("../public/images/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
-}
-.main-bg {
-  background: url("../public/images/vector-8.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.mobile-bg {
-  background: url("../public/images/mobile-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .home-round {
   border-top-left-radius: 25%;

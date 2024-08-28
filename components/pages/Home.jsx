@@ -2,13 +2,11 @@
 import Image from "next/image";
 import React,{useEffect, useState} from "react";
 import rasamFont from "@/public/images/rasam-font.svg"; 
-import { MotionDiv, MotionH1, MotionSpan } from "../MotionComponent";
 import HomePageDate from "../HomePageDate";
 import LandingPage from "../LandingPage";
-
+import { motion } from "framer-motion";
 
 const Home = () => {
-  const numbers = ["25", "|", "26", "|", "27"];
   const [load,setLoad]=useState(true);
   useEffect(()=>{
     setTimeout(() => {
@@ -23,7 +21,7 @@ const Home = () => {
     >
        {load && <LandingPage/>}
       <div className="w-full h-full flex flex-col items-center justify-center pt-12 sm:pt-24">
-        <MotionDiv
+        <motion.div
           initial={{ scale: 0.7,opacity: 0.3,}}
           whileInView={{ scale: 1,opacity: 1}}
           viewport={{ once: true }}
@@ -38,18 +36,18 @@ const Home = () => {
             alt="font"
             style={{ height: "auto", width: "100%" }}
           />
-        </MotionDiv>
+        </motion.div>
 
-        <MotionH1
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <motion.h1
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1,delay:5, ease: "easeInOut" }}
-          className="text-red-100 text-md sm:text- lg:text-2xl home-hashtag select-none"
+          className="text-neutral-50 text-md sm:text- lg:text-2xl home-hashtag select-none"
         >
           #KelkanOru<span className="font-bold">Rasam</span>KananOru
           <span className="font-bold">Kothi</span>
-        </MotionH1>
+        </motion.h1>
         <HomePageDate/>
       </div>
     </section>
