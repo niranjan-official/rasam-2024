@@ -13,7 +13,7 @@ const Gallery = ({gallery}) => {
     >
       <BgParticles/>
       <Heading title={"Gallery"} />
-      <div className="flex  flex-row justify-center items-center py-8">
+      <div className="flex  flex-row justify-center items-center pt-4 pb-8">
       <ReactMaterialCarousel images={gallery}/>
       </div>
     </section>

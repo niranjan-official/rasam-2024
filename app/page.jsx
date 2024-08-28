@@ -17,6 +17,33 @@ const fetchData = async () => {
 };
 
 export default async function Main() {
+  // Comment the below fetchData line if you dont need dynamic image importing
+  // For Static Images : Use the below shown data format
+  /*
+  data: [
+    First Array [for events]
+    [
+      {
+        name: "...event_name",
+        about: ".....",
+        fee: "...event_fee",
+        contact: { name : "..ph_number", name : "..ph_number" },
+        image: " image_link or image_src ",
+        date: "...event_date",
+        link: "..registration_link"
+      },
+      {
+        "....." : "..."
+      }
+    ],
+    Second Array [for gallery]
+    [
+      {
+        image: [ "image_link or image_src", "image_link or image_src", "..." ]
+      }
+    ]
+  ]
+  */
   const data = await fetchData();
 
   return (
